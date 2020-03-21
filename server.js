@@ -6,14 +6,7 @@
 const express = require("express");
 const app = express();
 
-// our default array of dreams
-const dreams = [
-  "Find and count some sheep",
-  "Climb a really tall mountain",
-  "Wash the dishes"
-];
-
-// make all the files in 'public' available
+// make all the files Iin 'public' available
 // https://expressjs.com/en/starter/static-files.html
 app.use(express.static("public"));
 
@@ -22,10 +15,17 @@ app.get("/", (request, response) => {
   response.sendFile(__dirname + "/views/index.html");
 });
 
-// send the default array of dreams to the webpage
-app.get("/dreams", (request, response) => {
-  // express helps us take JS objects and send them as JSON
-  response.json(dreams);
+app.get("/messages", (request, response) => {
+  let i = 0;
+
+  const interval = setInterval(() => {
+    i += 1;
+    response.write(`friend: ${i}\n`);
+    if (i === 3) {
+      clearInterval(interval);
+      response.end();
+    }
+  }, 1000);
 });
 
 // listen for requests :)
