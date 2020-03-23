@@ -55,7 +55,7 @@ body {
 }
 
 .c-chat__view {
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: var(--inset);
 }
 .c-chat__chat-form {
   flex: 0 0 auto;
