@@ -1,14 +1,85 @@
-* {
+/* Variables ******************************************************************/
+:root {
+  --surface: #f0f0f0;
+  --edge: #d0d0d0;
+  --inset: white;
+  --do: #2e4df0;
+}
+
+
+/* Resets *********************************************************************/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
   box-sizing: border-box;
 }
 
+/* Generic ********************************************************************/
+
+html {
+  font-size: 16px;
+  line-height: calc(4 / 16px);
+  overflow-y: scroll;
+  min-height: 100%;
+}
 body {
-  font-family: sans-serif;
-  margin: 2em 1em;
-  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  background-color: var(--surface);
 }
 
-iframe {
-  height: 15rem;
+/* Components *****************************************************************/
+
+.c-chat {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  position: absolute;
+  height: 100%;
   width: 100%;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.c-chat__view {
+  border-radius: 5px;
+  border: 1px solid var(--edge);
+  background-color: var(--inset);
+  flex: 1 1 auto;
+}
+
+.c-chat__view {
+  background-color: var(--inset);
+}
+.c-chat__chat-form {
+  flex: 0 0 auto;
+  display: flex;
+  padding-top: 1em;
+}
+
+.c-chat__message-input {
+  border-radius: 5px;
+  flex: 1 1 0%;
+  display: inline-block;
+  border: 1px solid var(--edge);
+  font-size: 1.2em;
+  padding: .2em .5em;
+}
+
+.c-chat__message-send {
+  border-radius: 5px;
+  flex: 0 0 auto;
+  display: inline-block;
+  border: none;
+  background-color: var(--do);
+  color: var(--inset);
+  padding: .2em .5em;
+  font-size: 1.2em;
+  margin-left: 1em;
 }
