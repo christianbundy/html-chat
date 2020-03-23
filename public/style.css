@@ -25,6 +25,7 @@ html {
   line-height: calc(4 / 16px);
   overflow-y: scroll;
   min-height: 100%;
+  font-family: sans-serif;
 }
 body {
   margin: 0;
@@ -33,7 +34,7 @@ body {
 }
 
 /* Components *****************************************************************/
-
+/* Chat */
 .c-chat {
   display: flex;
   flex-direction: column;
@@ -73,13 +74,50 @@ body {
 }
 
 .c-chat__message-send {
-  border-radius: 5px;
   flex: 0 0 auto;
+  margin-left: 1em;
+}
+
+/* Sign In */
+.c-sign-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.c-sign-in__form {
+  border: 1px solid var(--edge);
+  background-color: var(--inset);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.c-sign-in__form > * + * {
+  margin-top: 1em;
+}
+
+/* Button */
+.c-button {
+  border-radius: 5px;
   display: inline-block;
   border: none;
   background-color: var(--do);
   color: var(--inset);
   padding: .2em .5em;
   font-size: 1.2em;
-  margin-left: 1em;
+}
+
+.c-text-input {
+  border: 1px solid var(--edge);
+  background-color: var(--inset);
+  padding: 1em;
+  border-radius: 5px;
+}
+
+/* Utility ********************************************************************/
+
+.u-hidden {
+  display: none;
 }
