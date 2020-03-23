@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Welcome to Glitch!</title>
+    <title>Chat</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="A cool thing made with Glitch" />
@@ -16,15 +16,11 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
-    <header>
-      <h1>HTML-only chat</h1>
-    </header>
-
-    <main>
-      <iframe src="/messages"></iframe>
-      <form action="/messages" method="post">
-        <input name="message" type="text" />
-        <button type="submit">submit</button>
+    <main class="c-chat">
+      <iframe class="c-chat__view" src="/messages#latest"></iframe>
+      <form class="c-chat__chat-form" action="/messages" method="post" autocomplete="off">
+        <input class="c-chat__message-input" autofocus name="message" type="text" />
+        <button class="c-chat__message-send" type="submit">Send</button>
       </form>
     </main>
   </body>
