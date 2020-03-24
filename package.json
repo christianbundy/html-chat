@@ -1,7 +1,7 @@
 {
-  "name": "hello-express",
+  "name": "html-chat",
   "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
+  "description": "A live-updating chat room without any browser JavaScript",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -16,17 +16,21 @@
     "node": "12.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
+    "url": "git+https://github.com/christianbundy/html-chat.git"
   },
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "keywords": [
     "node",
-    "glitch",
-    "express"
+    "express",
+    "chat"
   ],
   "devDependencies": {
     "common-good": "^2.0.3",
     "stylelint-config-recommended": "^3.0.0"
   },
-  "author": ""
+  "author": "Christian Bundy",
+  "bugs": {
+    "url": "https://github.com/christianbundy/html-chat/issues"
+  },
+  "homepage": "https://github.com/christianbundy/html-chat#readme"
 }
