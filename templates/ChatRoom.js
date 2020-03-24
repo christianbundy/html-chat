@@ -1,4 +1,4 @@
-exports.ChatRoom = props => `
+exports.ChatRoom = (props) => `
   <main class="c-chat">
     <iframe class="c-chat__view" src="/messages"></iframe>
     <form class="c-chat__chat-form" action="/messages" method="post" autocomplete="off">
@@ -7,4 +7,4 @@ exports.ChatRoom = props => `
       <button class="c-chat__message-send c-button" type="submit">Send</button>
     </form>
   </main>
-`
+`;
