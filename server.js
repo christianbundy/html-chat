@@ -62,7 +62,7 @@ const routeGetMessages = () => (request, response) => {
     const line = `${sentence}`;
     response.write(line);
   };
-  const cutoff = Math.max(messageList.length - 10, 0);
+  const cutoff = Math.max(messageList.length - 16, 0);
   const latest = messageList.slice(cutoff);
   if (cutoff !== 0) {
     messageList = latest;
