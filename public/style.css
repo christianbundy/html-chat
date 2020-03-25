@@ -6,7 +6,6 @@
   --do: #2e4df0;
 }
 
-
 /* Resets *********************************************************************/
 *,
 *:before,
@@ -14,18 +13,15 @@
   box-sizing: inherit;
 }
 
-html {
-  box-sizing: border-box;
-}
-
 /* Generic ********************************************************************/
 
 html {
   font-size: 16px;
-  line-height: calc(4 / 16px);
+  line-height: calc(4 * 16px);
   overflow-y: scroll;
   min-height: 100%;
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -55,9 +51,6 @@ body {
   flex: 1 1 auto;
 }
 
-.c-chat__view {
-  background-color: var(--inset);
-}
 .c-chat__chat-form {
   flex: 0 0 auto;
   display: flex;
@@ -70,7 +63,7 @@ body {
   display: inline-block;
   border: 1px solid var(--edge);
   font-size: 1.2em;
-  padding: .2em .5em;
+  padding: 0.2em 0.5em;
 }
 
 .c-chat__message-send {
@@ -105,7 +98,7 @@ body {
   border: none;
   background-color: var(--do);
   color: var(--inset);
-  padding: .2em .5em;
+  padding: 0.2em 0.5em;
   font-size: 1.2em;
 }
 

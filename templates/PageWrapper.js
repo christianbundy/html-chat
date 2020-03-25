@@ -1,4 +1,4 @@
-exports.PageWrapper = props => `
+exports.PageWrapper = (props) => `
   <!DOCTYPE html>
   <html lang="en">
     <head>
