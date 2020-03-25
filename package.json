@@ -30,7 +30,10 @@
     "common-good": "^2.0.3",
     "stylelint-config-recommended": "^3.0.0"
   },
-  "author": "Christian Bundy",
+  "contributors": [
+    "Christian Bundy",
+    "Cameron Leslie <cameronleslie@gmail.com>"
+  ],
   "bugs": {
     "url": "https://github.com/christianbundy/html-chat/issues"
   },
