@@ -5,5 +5,5 @@ const SignIn = props => `
       <button class="c-sign-in__submit c-button" type="submit">Join Chat</button>
     </form>
   </main>
-`
+`;
 export default SignIn;
