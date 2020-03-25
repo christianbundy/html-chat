@@ -4,13 +4,14 @@
   "description": "A live-updating chat room without any browser JavaScript",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node -r esm server.js",
     "test": "common-good",
     "fix": "common-good fix"
   },
   "dependencies": {
+    "esm": "^3.2.25",
     "express": "^4.17.1",
-    "filigree-text": "^0.1.0"
+    "redux": "^4.0.5"
   },
   "engines": {
     "node": "12.x"
@@ -25,6 +26,7 @@
     "chat"
   ],
   "devDependencies": {
+    "eslint-config-node": "^4.0.0",
     "common-good": "^2.0.3",
     "stylelint-config-recommended": "^3.0.0"
   },

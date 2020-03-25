@@ -1,12 +1,14 @@
-exports.stringToColor = function (str) {
+const stringToColor = str => {
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
     hash = str.charCodeAt(i) + ((hash << 5) - hash);
   }
-  let colour = "#";
+  let color = '#';
   for (let i = 0; i < 3; i++) {
-    let value = (hash >> (i * 8)) & 0xff;
-    colour += ("00" + value.toString(16)).substr(-2);
+    const value = (hash >> (i * 8)) & 0xFF;
+    color += ('00' + value.toString(16)).substr(-2);
   }
-  return colour;
+  return color;
 };
+
+export default stringToColor
