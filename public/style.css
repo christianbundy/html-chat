@@ -4,6 +4,7 @@
   --edge: #d0d0d0;
   --inset: white;
   --do: #2e4df0;
+  --do-hover: #5870ec;
 }
 
 
@@ -34,6 +35,28 @@ body {
 }
 
 /* Components *****************************************************************/
+/* Button */
+.c-button {
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  background-color: var(--do);
+  color: var(--inset);
+  padding: .2em .5em;
+  font-size: 1.2em;
+}
+
+.c-button:hover {
+  background-color: var(--do-hover);
+}
+
+.c-text-input {
+  border: 1px solid var(--edge);
+  background-color: var(--inset);
+  padding: 1em;
+  border-radius: 5px;
+}
+
 /* Chat */
 .c-chat {
   display: flex;
@@ -48,6 +71,10 @@ body {
   bottom: 0;
 }
 
+.c-chat > * + * {
+  margin-top: 1em;
+}
+
 .c-chat__view {
   border-radius: 5px;
   border: 1px solid var(--edge);
@@ -58,10 +85,10 @@ body {
 .c-chat__view {
   background-color: var(--inset);
 }
+
 .c-chat__chat-form {
   flex: 0 0 auto;
   display: flex;
-  padding-top: 1em;
 }
 
 .c-chat__message-input {
@@ -70,11 +97,13 @@ body {
   display: inline-block;
   border: 1px solid var(--edge);
   font-size: 1.2em;
-  padding: .2em .5em;
+  padding-left: .2em .5em;
 }
 
 .c-chat__message-send {
   flex: 0 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
   margin-left: 1em;
 }
 
@@ -93,27 +122,11 @@ body {
   flex-direction: column;
   border-radius: 5px;
 }
-
-.c-sign-in__form > * + * {
-  margin-top: 1em;
-}
-
-/* Button */
-.c-button {
-  border-radius: 5px;
-  display: inline-block;
-  border: none;
-  background-color: var(--do);
-  color: var(--inset);
-  padding: .2em .5em;
+.c-sign-in__user-name {
   font-size: 1.2em;
 }
-
-.c-text-input {
-  border: 1px solid var(--edge);
-  background-color: var(--inset);
-  padding: 1em;
-  border-radius: 5px;
+.c-sign-in__form > * + * {
+  margin-top: 1em;
 }
 
 /* Utility ********************************************************************/

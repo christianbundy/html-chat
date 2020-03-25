@@ -1,4 +1,4 @@
-exports.PageWrapper = props => `
+const PageWrapper = props => `
   <!DOCTYPE html>
   <html lang="en">
     <head>
@@ -19,3 +19,5 @@ exports.PageWrapper = props => `
     </body>
   </html>
 `;
+
+export default PageWrapper;
